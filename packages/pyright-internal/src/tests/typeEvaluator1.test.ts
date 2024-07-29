@@ -31,6 +31,13 @@ test('Unreachable1', () => {
     TestUtils.validateResults(analysisResults, 0, 0, 2, 1, 6);
 });
 
+test('Unreachable2', () => {
+    const analysisResults = TestUtils.typeAnalyzeSampleFiles(['unreachable2.py']);
+
+    TestUtils.validateResults(analysisResults, 0, 0, 0, 0, 0);
+});
+
+
 test('Builtins1', () => {
     const analysisResults = TestUtils.typeAnalyzeSampleFiles(['builtins1.py']);
 
